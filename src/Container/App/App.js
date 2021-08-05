@@ -1,44 +1,44 @@
-import React, { useState } from 'react';
-import classes from './App.module.css';
-import Task from '../../Component/Task/Task';
+import React, { useState } from 'react'
+import classes from './App.module.css'
+import Task from '../../Component/Task/Task'
 
 function App() {
   //States
-  const [tasks, setTasks] = useState([]);
-  const [input, setInput] = useState(' ');
+  const [tasks, setTasks] = useState([])
+  const [input, setInput] = useState(' ')
 
   //Fonctions
   const removeClickedHandler = index => {
-    const newTasks = [...tasks];
-    newTasks.splice(index, 1);
-    setTasks(newTasks);
-  };
+    const newTasks = [...tasks]
+    newTasks.splice(index, 1)
+    setTasks(newTasks)
+  }
 
   const doneClickedHandler = index => {
-    const newTasks = [...tasks];
-    newTasks[index].done = !tasks[index].done;
-    setTasks(newTasks);
-  };
+    const newTasks = [...tasks]
+    newTasks[index].done = !tasks[index].done
+    setTasks(newTasks)
+  }
 
   const submittedTaskHandler = event => {
-    event.preventDefault();
+    event.preventDefault()
 
     const newTasks = {
       content: input,
       done: false,
-    };
-    setTasks([...tasks, newTasks]);
-    setInput('');
-  };
+    }
+    setTasks([...tasks, newTasks])
+    setInput('')
+  }
 
   const changedFromHandler = event => {
-    setInput(event.target.value);
-  };
+    setInput(event.target.value)
+  }
 
   //Variable
   let tasksDisplayed = tasks.map((task, index) => {
-    const _removeClickedHandler = () => removeClickedHandler(index);
-    const _doneClickedHandler = () => doneClickedHandler(index);
+    const _removeClickedHandler = () => removeClickedHandler(index)
+    const _doneClickedHandler = () => doneClickedHandler(index)
     return (
       <Task
         done={task.done}
@@ -47,8 +47,8 @@ function App() {
         removedClicked={_removeClickedHandler}
         doneClicked={_doneClickedHandler}
       />
-    );
-  });
+    )
+  })
 
   return (
     <div className={classes.App}>
@@ -69,7 +69,7 @@ function App() {
       </div>
       {tasksDisplayed}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
