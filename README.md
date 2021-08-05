@@ -1,6 +1,6 @@
-######      First REACT Project     ######
-  ######################################
-        ## [CREATION TO - DO LIST] ##
+##      First REACT Project     ##
+
+## [CREATION TO - DO LIST] ##
 ##  1 - Create Components               ##
 ##  2 - Create Css Modules              ##
 ##  3 - Create the STATE                ##
