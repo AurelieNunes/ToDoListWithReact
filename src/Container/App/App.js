@@ -8,19 +8,19 @@ function App() {
   const [input, setInput] = useState(' ');
 
   //Fonctions
-  const removeClickedHandler = (index) => {
+  const removeClickedHandler = index => {
     const newTasks = [...tasks];
     newTasks.splice(index, 1);
     setTasks(newTasks);
   };
 
-  const doneClickedHandler = (index) => {
+  const doneClickedHandler = index => {
     const newTasks = [...tasks];
     newTasks[index].done = !tasks[index].done;
     setTasks(newTasks);
   };
 
-  const submittedTaskHandler = (event) => {
+  const submittedTaskHandler = event => {
     event.preventDefault();
 
     const newTasks = {
@@ -31,7 +31,7 @@ function App() {
     setInput('');
   };
 
-  const changedFromHandler = (event) => {
+  const changedFromHandler = event => {
     setInput(event.target.value);
   };
 
