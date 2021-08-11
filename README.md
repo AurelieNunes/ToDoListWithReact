@@ -8,5 +8,8 @@
 ##  5 - Manage Check                    ##
 ##  6 - Manage Add a new Task           ##
 
-## WITH @believeMy
+## NEW ##
+
+## Create Focus on the input ##
+## Create CRUD for tasks with firebase  ##
 
